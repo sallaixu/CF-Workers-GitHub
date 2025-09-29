@@ -217,10 +217,10 @@ export default {
 					});
 				} else return fetch(new Request(env.URL, request));
 			} else {
-				return new Response(await githubInterface(), {
-					headers: {
-						'Content-Type': 'text/html; charset=UTF-8',
-					},
+				return new Response(await nginx(), {
+						headers: {
+							'Content-Type': 'text/html; charset=UTF-8',
+						},
 				});
 			}
 		}
